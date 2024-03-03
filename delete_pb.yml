@@ -1,0 +1,14 @@
+---
+- name: Deleting the files
+  hosts: all
+
+  tasks:
+    - name: Deleting a file
+      file:
+        path: /tmp/satyarth.txt
+        state: absent
+
+    - name: Deleting a Folder
+      file:
+        path: /tmp/Satyarth/
+        state: absent
