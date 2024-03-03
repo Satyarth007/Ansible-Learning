@@ -1,0 +1,17 @@
+---
+- name: Creating files and folder Remotely
+  hosts: all
+
+  tasks:
+    - name: Creating a file
+      file:
+        path: /tmp/newFile.txt
+        state: touch
+        owner: satyarth
+        group: satyarth
+        mode:
+
+    - name: Create a Folder
+      file:
+        path: /tmp/newFolder
+        state: directory
