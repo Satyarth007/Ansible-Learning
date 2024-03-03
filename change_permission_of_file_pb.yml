@@ -1,0 +1,9 @@
+---
+- name: Change permission of files
+  hosts: all
+
+  tasks:
+    - name: Changing permissions
+      file:
+        path: /tmp/satyarth.txt
+        mode: u=rwx,g=rw,o=r
