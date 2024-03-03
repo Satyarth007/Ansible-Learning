@@ -1,0 +1,13 @@
+---
+- name: Remotely copy a file
+  hosts: all
+
+  tasks:
+    - name: Copy a file
+      copy:
+        src: /root/myFile.txt
+        dest: /tmp/
+        owner: satyarth
+        group: satyarth
+        mode: u=rwx,g=rw,o=r
+        backup: true
